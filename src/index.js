@@ -7,8 +7,6 @@ const smartSettings = {
   clientId: "741abf75-0a36-4f95-8616-e5f4055e016d",
   redirectUri: "/app",
   scope: "launch/patient patient/*.read openid fhirUser",
-  iss:
-      "https://launch.smarthealthit.org/v/r2/sim/eyJrIjoiMSIsImIiOiJzbWFydC03Nzc3NzA1In0/fhir"
 };
 
 
@@ -84,6 +82,7 @@ const init = async () => {
       method: "GET",
       path: "/app",
       handler: async (request, h) => {
+        // handler will be called here
         return smart(request, h).ready((client) => handler(client, h));
       }
     });
