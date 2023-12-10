@@ -6,7 +6,7 @@ const smart = require("fhirclient/lib/entry/hapi");
 const smartSettings = {
   clientId: "741abf75-0a36-4f95-8616-e5f4055e016d",
   redirectUri: "/app",
-  scope: "launch/patient patient/*.read openid fhirUser",
+  scope: "patient/Patient.read openid fhirUser",
 };
 
 
